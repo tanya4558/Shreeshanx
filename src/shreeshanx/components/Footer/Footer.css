@@ -1,0 +1,130 @@
+.sfoot {
+  background: #0a1009;
+  border-top: 1px solid var(--line);
+}
+
+.sfoot__grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+  gap: 40px;
+  padding: 60px 22px 44px;
+}
+
+.sfoot__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.sfoot__mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: var(--lime);
+  color: #0d1411;
+}
+
+.sfoot__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--cream);
+  letter-spacing: 0.02em;
+}
+
+.sfoot__name i {
+  font-style: normal;
+  color: var(--lime);
+  margin-left: 5px;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  vertical-align: middle;
+}
+
+.sfoot__brand p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  max-width: 320px;
+  margin: 0 0 20px;
+}
+
+.sfoot__wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--lime);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.sfoot__col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sfoot__col h5 {
+  font-family: var(--font-display);
+  color: var(--cream);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 4px;
+}
+
+.sfoot__col a,
+.sfoot__contact span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.sfoot__col a:hover {
+  color: var(--lime);
+}
+
+.sfoot__contact svg {
+  color: var(--lime);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.sfoot__bar {
+  border-top: 1px solid var(--line);
+}
+
+.sfoot__bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 22px;
+  flex-wrap: wrap;
+}
+
+.sfoot__bar-inner span {
+  color: var(--muted-dark);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 860px) {
+  .sfoot__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  .sfoot__grid {
+    grid-template-columns: 1fr;
+  }
+  .sfoot__bar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
