@@ -23,6 +23,12 @@ const benefitIcon = {
   shield: <FaShieldAlt />,
 };
 
+const REVIEWS = [
+  { name: "Priya M.", role: "Terrace gardener", text: "Best cocopeat I've used — my seedlings shot up. Super fine and clean." },
+  { name: "Arjun K.", role: "Hydroponics hobbyist", text: "The 10kg buffered pack is fantastic value. Consistent quality every time." },
+  { name: "Meera S.", role: "Nursery owner", text: "We switched fully to Shreeshanx. Great water retention and fast delivery." },
+];
+
 export default function Home() {
   return (
     <div className="home">
@@ -169,25 +175,20 @@ export default function Home() {
         </div>
       </section> */}
 
-      {/* Reviews */}
-      <section className="section reviews">
+<section className="section reviews">
         <div className="container">
           <div className="section-head">
-            <span className="eyebrow">Loved by gardeners</span>
-            <h2>What our customers say</h2>
+            <span className="eyebrow">Loved by growers</span>
+            <h2>What customers say</h2>
           </div>
           <div className="reviews__grid">
-            {[
-              { n: "Priya M.", t: "My seedlings sprouted faster than ever. The cocopeat is super fine and clean.", c: "Terrace gardener" },
-              { n: "Rakesh P.", t: "Great quality and value for the 10kg pack. Holds water beautifully.", c: "Nursery owner" },
-              { n: "Anjali S.", t: "No fibre, no mess, low EC exactly as described. Will reorder!", c: "Home grower" },
-            ].map((r) => (
-              <div className="review" key={r.n}>
-                <div className="review__stars"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></div>
-                <p>"{r.t}"</p>
+            {REVIEWS.map((r) => (
+              <div className="review" key={r.name}>
+                <span className="stars review__stars"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></span>
+                <p>“{r.text}”</p>
                 <div className="review__by">
-                  <strong>{r.n}</strong>
-                  <span>{r.c}</span>
+                  <strong>{r.name}</strong>
+                  <span>{r.role}</span>
                 </div>
               </div>
             ))}
