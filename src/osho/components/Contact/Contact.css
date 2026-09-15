@@ -1,0 +1,243 @@
+.contact__hero {
+  background: radial-gradient(900px 380px at 80% -20%, var(--lime-soft), transparent 60%),
+    linear-gradient(160deg, var(--leaf-bg), var(--cream));
+  padding: 56px 0 44px;
+  text-align: center;
+}
+
+.contact__hero h1 {
+  font-size: clamp(2.1rem, 5vw, 3.1rem);
+  margin: 6px 0 10px;
+}
+
+.contact__hero p {
+  color: var(--muted);
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.contact__cards {
+  display: grid;
+  gap: 14px;
+}
+
+.contact__card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+a.contact__card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: var(--lime-soft);
+  color: var(--green);
+  font-size: 1.15rem;
+}
+
+.contact__icon--wa {
+  background: #25d366;
+  color: #fff;
+}
+
+.contact__card h4 {
+  margin: 0 0 2px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.contact__card p {
+  margin: 0 0 3px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.contact__card strong {
+  font-size: 0.9rem;
+  color: var(--green-deep);
+}
+
+.contact__side {
+  display: grid;
+  gap: 22px;
+}
+
+.contact__form {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact__form h3 {
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+}
+
+.contact__form label {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--green-dark);
+  margin-bottom: 14px;
+}
+
+.contact__form input,
+.contact__form textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--ink);
+  background: var(--cream);
+  resize: vertical;
+  transition: border-color 0.18s ease;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+.contact__form .btn {
+  margin-top: 4px;
+}
+
+.contact__map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--line);
+  height: 280px;
+}
+
+.contact__map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact__tm-wrap {
+  padding-bottom: 82px;
+}
+
+.contact__tm {
+  background: linear-gradient(150deg, var(--green-dark), var(--green-deep));
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+}
+
+.contact__tm-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.contact__tm-badge {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.contact__tm-head h3 {
+  color: #fff;
+  font-size: 1.35rem;
+}
+
+.contact__tm-head p {
+  margin: 4px 0 0;
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact__tm ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 34px;
+}
+
+.contact__tm li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.88rem;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact__tm li span {
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+}
+
+.contact__tm li strong {
+  text-align: right;
+  color: #eaf3df;
+  font-weight: 600;
+}
+
+.contact__tm-goods {
+  grid-column: 1 / -1;
+  border-bottom: none !important;
+}
+
+.contact__tm-goods strong {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+@media (max-width: 860px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+  .contact__tm ul {
+    grid-template-columns: 1fr;
+  }
+  .contact__tm li {
+    padding: 10px 0;
+  }
+}

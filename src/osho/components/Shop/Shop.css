@@ -1,0 +1,54 @@
+.shop__hero {
+  background: radial-gradient(900px 380px at 80% -20%, var(--lime-soft), transparent 60%),
+    linear-gradient(160deg, var(--leaf-bg), var(--cream));
+  padding: 56px 0 44px;
+  text-align: center;
+}
+
+.shop__hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin: 6px 0 10px;
+}
+
+.shop__hero p {
+  color: var(--muted);
+  margin: 0 auto;
+  max-width: 520px;
+}
+
+.shop__bar {
+  background: var(--green-dark);
+  color: #fff;
+}
+
+.shop__bar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 26px;
+  padding: 14px 22px;
+}
+
+.shop__bar-inner div {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.shop__bar-inner svg {
+  color: var(--lime);
+}
+
+.shop__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 22px;
+}
+
+@media (max-width: 520px) {
+  .shop__grid {
+    grid-template-columns: 1fr;
+  }
+}
